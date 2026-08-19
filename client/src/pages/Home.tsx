@@ -97,11 +97,11 @@ export default function Home() {
         <div className="rail-rule" />
         <div className="nav-heading mono">WORKSPACE <span>01</span></div>
         <nav className="nav-list">
-          {navItems.map(({ label, icon, active, count }) => <button key={label} className={`nav-item ${active ? "active" : ""}`} onClick={() => action(`${label} selected`)}><AppIcon icon={icon} active={active} /><span>{label}</span>{count && <em>{count}</em>}</button>)}
+          {navItems.map(({ label, icon, active, count }) => <button key={label} className={`nav-item ${active ? "active" : ""}`} onClick={() => { if (!active) window.location.href = `/${label.toLowerCase()}`; }}><AppIcon icon={icon} active={active} /><span>{label}</span>{count && <em>{count}</em>}</button>)}
         </nav>
         <div className="nav-heading mono second">TOOLS <span>02</span></div>
         <nav className="nav-list">
-          {systems.map(({ label, icon }) => <button key={label} className="nav-item" onClick={() => action(`${label} opened`)}><AppIcon icon={icon} /><span>{label}</span></button>)}
+          {systems.map(({ label, icon }) => <button key={label} className="nav-item" onClick={() => { window.location.href = `/${label.toLowerCase()}`; }}><AppIcon icon={icon} /><span>{label}</span></button>)}
         </nav>
         <div className="sidebar-footer">
           <div className="system-readout"><span className="pulse-dot" /><div><strong>SYSTEM ONLINE</strong><small className="mono">ALL SERVICES NOMINAL</small></div></div>

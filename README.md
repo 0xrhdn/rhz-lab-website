@@ -1,6 +1,6 @@
 # RHZ LAB
 
-RHZ LAB is a premium cybersecurity learning and CTF laboratory interface built as a responsive React frontend. The current delivery is a polished command-center dashboard and content infrastructure concept based on the supplied product brief.
+RHZ LAB is a premium cybersecurity learning and CTF laboratory interface built as a responsive React frontend. The current delivery is a polished command-center dashboard with directly accessible learner, tool, competition, profile, settings, system-status, and creator-studio module pages based on the supplied product brief.
 
 ## Requirements
 
@@ -83,4 +83,4 @@ pnpm format    # Format the source tree
 
 ## Current scope
 
-The current project is frontend-only. It includes the dashboard shell, responsive navigation, keyboard search modal with `Ctrl/Cmd + K`, progress telemetry, operation cards, creator-infrastructure messaging, and generated RHZ LAB visual assets. The actual challenge engine, authentication, persistence, creator CRUD, flags, hints, uploads, and user progress storage are intentionally not implemented yet.
+The current project is frontend-only. It includes the dashboard shell, routed learner and creator modules, responsive navigation, keyboard search modal with `Ctrl/Cmd + K`, progress telemetry, operation cards, creator-infrastructure messaging, and generated RHZ LAB visual assets. The actual challenge engine, authentication, persistence, creator CRUD, flags, hints, uploads, terminal runtime, and user progress storage still require a backend/data layer; routed pages now provide the correct usable surfaces for those integrations.
